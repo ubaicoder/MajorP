@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Freeman&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,500;1,500&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.intro-text {
+    border: 1px solid #E0E0E0;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 600px; /* Optional: Limits the width for better centering on large screens */
+}
+.intro-text h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+.intro-text p{
+    font-family: "Inter", sans-serif;
+    color: #666666;
+    font-size: 12px;
+    line-height: normal;
+}
+.intro-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    
+}
+.cd{
+    width: 300px;
+    height: 160px !important;
+    padding: 15px;
+    font-family: "Inter", sans-serif;
+    border-radius: 20px !important;
+    
+}
+.ct{
+    gap: 20px;
+}
+.r2 h3{
+    font-family: "Poppins", sans-serif;
+}
+.cd:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+.progress{
+    height: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+label{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-bottom: 5px; 
+}
+.pc{
+    border: 1px solid #E0E0E0;
+    border-radius: 16px;
+    padding: 20px;
+}
+.pc h4{
+    font-family: "Poppins", sans-serif;
+    
+}
+.pc:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+.comI p{
+  margin-top:7px;
+  background-color: #666666;
+  color: white;
+ padding: 8px;
+ text-align: center;
+ width: 75px;
+ border-radius: 12px;
+ font-family: "Inter", sans-serif;
+ font-size: 12px;
+}
+.ri{
+    border: 1px solid #E0E0E0;
+    padding: 10px;
+    height: 90px;
+    border-radius: 20px;
+}
+.ri h5{
+    font-family: "Montserrat", sans-serif;
+    color: red;
+}
+.ri button{
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    padding: 5px 10px;
+    background-color: gainsboro;
+}
+.r4{
+    border: 1px solid #E0E0E0;
+    padding: 10px;
+    border-radius: 16px;
+    margin: 10px;
+    gap: 10px;
+}
+.r4 h4{
+    font-family: "Poppins", sans-serif;
+}
+.ft{
+    border-radius: 16px;
+    border: 1px solid #E0E0E0;
+    width: 305px !important;
+    cursor: pointer;
+}
+.r5{
+    gap: 20px;
+} 
