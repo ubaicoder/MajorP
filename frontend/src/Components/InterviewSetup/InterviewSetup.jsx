@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-
 import { Link } from "react-router-dom";
 import "./InterviewSetup.css";
 
@@ -17,19 +16,29 @@ function InterviewSetup() {
   const handleLogout = () => {
     // Clear localStorage
     localStorage.removeItem("name");
-   // Redirect to home page
+    // Redirect to home page
     navigate("/");
   };
   return (
     <>
       <div className="container">
-        <div className="row d-flex justify-content-between align-items-center my-2">
-          <div className="col text-end">
-            <button className="btn btn-danger" onClick={handleLogout}>
+        <header className="px-4 py-3 bg-white shadow-sm hd rounded">
+          <div className="container d-flex align-items-center justify-content-between">
+            <div className="d-flex align-items-center gap-2">
+              <div
+                className="bg-primary d-flex align-items-center justify-content-center rounded p-2"
+                style={{ width: "40px", height: "40px" }}
+              >
+                <span className="text-white fw-bold">AI</span>
+              </div>
+              <span className="fw-semibold fs-4 text-dark">Mock Interview</span>
+            </div>
+            <button onClick={handleLogout} className="btn btn-primary">
               Logout
             </button>
           </div>
-        </div>
+        </header>
+
         <div className="row r11 mx-2 my-4">
           <div className="col-sm-12 d-flex flex-column justify-content-center align-items-center m1">
             <div className="topic text-center">
