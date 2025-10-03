@@ -3,7 +3,7 @@ import "./Hero.css";
 import { Link, useNavigate } from "react-router-dom";
 
 function Hero() {
-  const name = localStorage.getItem("name");
+  const name = localStorage.getItem("username");
   const navigate = useNavigate();
 
   const handleLogout = () => {

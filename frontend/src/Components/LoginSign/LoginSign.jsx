@@ -5,6 +5,8 @@ import "./LoginSign.css";
 function LoginSign() {
   const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState("");
+  const [pusername, setPusername] = useState("");
+  const [ppasword, setPpasword] = useState("");
   const [mobile, setMobile] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -19,9 +21,22 @@ function LoginSign() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    // Check password validity
+  if (isLogin) {
+    // ✅ Login
+    const storedUser = localStorage.getItem("username");
+    const storedPass = localStorage.getItem("password");
+
+    if (pusername === storedUser && ppasword === storedPass) {
+      alert("Logged in successfully!");
+      localStorage.setItem("name", pusername);
+      navigate("/tohero");
+    } else {
+      setError("Username or Password incorrect. Please try again.");
+    }
+  } else {
+    // ✅ Signup
     if (!validatePassword(password)) {
       setError(
         "Password must be at least 8 characters long and contain an uppercase, lowercase, number, and special character."
@@ -29,18 +44,18 @@ function LoginSign() {
       return;
     }
 
-    setError(""); // Clear error if valid
-    
-    // Login is handled here
-    if (isLogin) {
-      alert("Logged in successfully!");
-      navigate("/tohero");
-      localStorage.setItem("name",username);
-    } else { 
-      alert("Signed up successfully!");   // Signup is handled here
-      navigate("/tohero");
-    }
-  };
+    setError(""); // clear error
+
+    // Save credentials
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
+    localStorage.setItem("mobile", mobile);
+
+    alert("Signed up successfully!");
+    navigate("/tohero");
+  }
+};
+
 
   return (
     <>
@@ -81,8 +96,8 @@ function LoginSign() {
                       <input
                         type="text"
                         placeholder="Username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)} // this allows live tracking of users input
+                        value={pusername}
+                        onChange={(e) => setPusername(e.target.value)} // this allows live tracking of users input
                         required
                         className="form-control"
                       />
@@ -90,8 +105,8 @@ function LoginSign() {
                         <input
                           type="password"
                           placeholder="Password"
-                          value={password}
-                          onChange={(e) => setPassword(e.target.value)}
+                          value={ppasword}
+                          onChange={(e) => setPpasword(e.target.value)}
                           required
                           className="form-control"
                         />
